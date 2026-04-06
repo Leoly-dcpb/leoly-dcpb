@@ -1,9 +1,105 @@
 <!DOCTYPE html>
 <html>
-<body style="background:black; color:lime; text-align:center; margin-top:20%; font-family:monospace;">
+<head>
+  <title>Eclipse</title>
 
-<h1>TRANSMISSÃO INTERCEPTADA</h1>
-<p>teste</p>
+  <style>
+    body {
+      background-color: black;
+      color: #00ff00;
+      font-family: monospace;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .side {
+      width: 25%;
+      padding: 20px;
+      font-size: 14px;
+      color: #008800;
+    }
+
+    .center {
+      width: 50%;
+      text-align: center;
+      margin-top: 10%;
+    }
+
+    input {
+      background: black;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      padding: 10px;
+      font-family: monospace;
+      text-align: center;
+      width: 60%;
+    }
+
+    button {
+      background: black;
+      color: #00ff00;
+      border: 1px solid #00ff00;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    h1 {
+      margin-top: 20px;
+      letter-spacing: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- ESQUERDA -->
+  <div class="side">
+    <p>Manual:</p>
+    <p>- Algumas mensagens estão codificadas.</p>
+    <p>- Cifra de César: desloca letras (ex: A → B).</p>
+    <p>- Tente deslocamentos simples (1, 2, 3...).</p>
+  </div>
+
+  <!-- CENTRO -->
+  <div class="center">
+
+    <input type="text" id="resposta" placeholder="Digite a resposta">
+    <br><br>
+    <button onclick="verificar()">ENVIAR</button>
+
+    <h1>ECLIPSE</h1>
+
+    <p>Uifsf jt b tfdsfu</p>
+
+  </div>
+
+  <!-- DIREITA -->
+  <div class="side">
+    <p>Dicas:</p>
+    <p>- Base64 parece texto estranho com = no final</p>
+    <p>- Você pode usar o Google pra decodificar</p>
+    <p>- Nem tudo é o que parece</p>
+  </div>
+
+</div>
+
+<script>
+function verificar() {
+  let r = document.getElementById("resposta").value.toLowerCase();
+
+  if (r === "there is a secret") {
+    window.location.href = "fase2.html";
+  } else {
+    alert("Resposta incorreta.");
+  }
+}
+</script>
 
 </body>
 </html>
