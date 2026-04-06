@@ -1,67 +1,9 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Transmissão</title>
-
-  <style>
-    body {
-      background-color: black;
-      color: #00ff00;
-      font-family: monospace;
-      text-align: center;
-      margin-top: 15%;
-    }
-
-    h1 {
-      letter-spacing: 3px;
-    }
-
-    input {
-      background: black;
-      color: #00ff00;
-      border: 1px solid #00ff00;
-      padding: 10px;
-      font-family: monospace;
-      text-align: center;
-    }
-
-    button {
-      background: black;
-      color: #00ff00;
-      border: 1px solid #00ff00;
-      padding: 10px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #003300;
-    }
-  </style>
-</head>
-
-<body>
+<body style="background:black; color:lime; text-align:center; margin-top:20%; font-family:monospace;">
 
 <h1>TRANSMISSÃO INTERCEPTADA</h1>
-
-<p>QSBjaGF2ZSBuYW8gw6kgdGFvIG9idmlh</p>
-
-<input type="text" id="resposta" placeholder="Digite a resposta">
-<br><br>
-<button onclick="verificar()">ENVIAR</button>
-
-<script>
-function verificar() {
-  let r = document.getElementById("resposta").value.toLowerCase();
-
-  if (r === "a chave nao é tao obvia") {
-    window.location.href = "fase2.html";
-  } else {
-    alert("Resposta incorreta.");
-  }
-}
-</script>
-
-<!-- a resposta está escondida no código -->
+<p>teste</p>
 
 </body>
 </html>
