@@ -18,8 +18,11 @@
 
     .center {
       width: 70%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* CENTRALIZA HORIZONTAL */
+      justify-content: center; /* CENTRALIZA VERTICAL */
       text-align: center;
-      margin-top: 8%;
     }
 
     .right {
@@ -59,13 +62,15 @@
 
     .coord {
       margin-top: 20px;
-      font-size: 18px;
+      font-size: 20px;
       letter-spacing: 2px;
     }
 
     .hint {
-      margin-top: 10px;
-      color: #888;
+      margin-top: 15px;
+      font-size: 24px; /* MAIOR */
+      font-weight: bold; /* MAIS DESTACADO */
+      letter-spacing: 3px;
     }
   </style>
 </head>
@@ -87,7 +92,7 @@
     </div>
 
     <div class="hint">
-      O arquiteto
+      O ARQUITETO
     </div>
 
     <br>
