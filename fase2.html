@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eclipse - Fase 2</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+      text-align: center;
+    }
+
+    .center {
+      margin-top: 5%;
+    }
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 8px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      font-family: monospace;
+      text-align: center;
+      width: 300px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+
+    img {
+      width: 400px;
+      margin: 30px 0;
+      border: 1px solid white;
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #bbbbbb;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="center">
+
+  <h1>ECLIPSE</h1>
+
+  <input type="text" id="resposta" placeholder="Digite a resposta">
+  <br><br>
+  <button onclick="verificar()">ENVIAR</button>
+
+  <!-- IMAGEM -->
+  <br>
+  <img src="imagem.png" alt="enigma">
+
+  <!-- DICAS -->
+  <div class="hint">
+    <p> Estrela de Davi</p>
+    <p>⬅ esquerda para a direita ➡</p>
+  </div>
+
+</div>
+
+<script>
+function verificar() {
+  let r = document.getElementById(estrela-de-davi).value.toLowerCase();
+
+  if (r === estrela-de-davi) {
+    window.location.href = "fase3.html";
+  } else {
+    alert("Resposta incorreta.");
+  }
+}
+</script>
+
+</body>
+</html>
