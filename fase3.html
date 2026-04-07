@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eclipse - Fase 3</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .center {
+      width: 70%;
+      text-align: center;
+      margin-top: 8%;
+    }
+
+    .right {
+      width: 30%;
+      padding: 20px;
+      color: #bbbbbb;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 8px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      font-family: monospace;
+      text-align: center;
+      width: 300px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+
+    .coord {
+      margin-top: 20px;
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+
+    .hint {
+      margin-top: 10px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- CENTRO -->
+  <div class="center">
+
+    <h1>ECLIPSE</h1>
+
+    <input type="text" id="resposta" placeholder="Digite a resposta">
+    <br><br>
+
+    <div class="coord">
+      40°41'20.4"N 74°02'42.0"W
+    </div>
+
+    <div class="hint">
+      O arquiteto
+    </div>
+
+    <br>
+    <button onclick="verificar()">ENVIAR</button>
+
+  </div>
+
+  <!-- DIREITA -->
+  <div class="right">
+    <p>Coordenadas:</p>
+    <p>- Representam um ponto na Terra</p>
+    <p>- Podem ser inseridas no Google Maps</p>
+    <p>- Latitude (N/S) e Longitude (E/W)</p>
+    <p>- Use isso para descobrir locais específicos</p>
+  </div>
+
+</div>
+
+<script>
+function verificar() {
+  let r = document.getElementById("resposta").value.toLowerCase().trim();
+
+  if (r === "frédéric auguste bartholdi" || r === "bartholdi") {
+    window.location.href = "fase4.html";
+  } else {
+    alert("Resposta incorreta.");
+  }
+}
+</script>
+
+</body>
+</html>
