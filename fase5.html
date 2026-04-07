@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eclipse - Fase 5</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+      text-align: center;
+    }
+
+    .center {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 8px;
+      margin-bottom: 40px;
+    }
+
+    .erro {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-family: monospace;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="center">
+
+  <h1>ECLIPSE</h1>
+
+  <div class="erro">
+    ERRO AO CARREGAR DADOS
+  </div>
+
+  <button onclick="baixar()">[ baixar arquivo ]</button>
+
+</div>
+
+<script>
+function baixar() {
+  window.location.href = "arquivo.txt";
+}
+</script>
+
+</body>
+</html>
