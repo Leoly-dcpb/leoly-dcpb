@@ -11,22 +11,21 @@
       margin: 0;
     }
 
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-
+    /* CENTRO REAL DA TELA */
     .center {
-      width: 70%;
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* CENTRALIZA HORIZONTAL */
-      justify-content: center; /* CENTRALIZA VERTICAL */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
     }
 
+    /* LATERAL DIREITA FIXA */
     .right {
-      width: 30%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 300px;
       padding: 20px;
       color: #bbbbbb;
       font-size: 14px;
@@ -68,8 +67,8 @@
 
     .hint {
       margin-top: 15px;
-      font-size: 24px; /* MAIOR */
-      font-weight: bold; /* MAIS DESTACADO */
+      font-size: 24px;
+      font-weight: bold;
       letter-spacing: 3px;
     }
   </style>
@@ -77,38 +76,34 @@
 
 <body>
 
-<div class="container">
+<!-- CENTRO -->
+<div class="center">
 
-  <!-- CENTRO -->
-  <div class="center">
+  <h1>ECLIPSE</h1>
 
-    <h1>ECLIPSE</h1>
+  <input type="text" id="resposta" placeholder="Digite a resposta">
+  <br><br>
 
-    <input type="text" id="resposta" placeholder="Digite a resposta">
-    <br><br>
-
-    <div class="coord">
-      40°41'20.4"N 74°02'42.0"W
-    </div>
-
-    <div class="hint">
-      O ARQUITETO
-    </div>
-
-    <br>
-    <button onclick="verificar()">ENVIAR</button>
-
+  <div class="coord">
+    40°41'20.4"N 74°02'42.0"W
   </div>
 
-  <!-- DIREITA -->
-  <div class="right">
-    <p>Coordenadas:</p>
-    <p>- Representam um ponto na Terra</p>
-    <p>- Podem ser inseridas no Google Maps</p>
-    <p>- Latitude (N/S) e Longitude (E/W)</p>
-    <p>- Use isso para descobrir locais específicos</p>
+  <div class="hint">
+    O ARQUITETO
   </div>
 
+  <br>
+  <button onclick="verificar()">ENVIAR</button>
+
+</div>
+
+<!-- DIREITA -->
+<div class="right">
+  <p>Coordenadas:</p>
+  <p>- Representam um ponto na Terra</p>
+  <p>- Podem ser inseridas no Google Maps</p>
+  <p>- Latitude (N/S) e Longitude (E/W)</p>
+  <p>- Use isso para descobrir locais específicos</p>
 </div>
 
 <script>
