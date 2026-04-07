@@ -27,7 +27,17 @@
 
     .erro {
       font-size: 20px;
-      margin-bottom: 40px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      font-family: monospace;
+      text-align: center;
+      width: 300px;
     }
 
     button {
@@ -37,6 +47,7 @@
       padding: 12px 20px;
       cursor: pointer;
       font-family: monospace;
+      margin-top: 10px;
     }
 
     button:hover {
@@ -55,13 +66,29 @@
     ERRO AO CARREGAR DADOS
   </div>
 
-  <button onclick="baixar()">[ baixar arquivo ]</button>
+  <!-- BOTÃO DOWNLOAD -->
+  <a href="arquivo.txt" download="dados_corrompidos.txt">
+    <button>[ baixar arquivo ]</button>
+  </a>
+
+  <br><br>
+
+  <!-- BARRA DE RESPOSTA -->
+  <input type="text" id="resposta" placeholder="Digite a resposta">
+  <br>
+  <button onclick="verificar()">ENVIAR</button>
 
 </div>
 
 <script>
-function baixar() {
-  window.location.href = "arquivo.txt";
+function verificar() {
+  let r = document.getElementById("resposta").value.toLowerCase().trim();
+
+  if (r === "nada é oque parece" || r === "nada e oque parece") {
+    window.location.href = "fase6.html";
+  } else {
+    alert("Resposta incorreta.");
+  }
 }
 </script>
 
