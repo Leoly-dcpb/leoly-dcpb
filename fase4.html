@@ -13,7 +13,7 @@
 
     .center {
       position: absolute;
-      top: 50%;
+      top: 42%; /* mais pra cima */
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center;
@@ -62,11 +62,27 @@
 </div>
 
 <!-- ÁUDIO MORSE -->
-<audio id="morse" autoplay loop>
-  <source src="morse.wav" type="audio/mpeg">
+<audio id="morse">
+  <source src="morse.wav" type="audio/wav">
 </audio>
 
 <script>
+const audio = document.getElementById("morse");
+
+function loopMorse() {
+  audio.currentTime = 0;
+  audio.play();
+
+  audio.onended = () => {
+    setTimeout(loopMorse, 7000); // cooldown de 7 segundos
+  };
+}
+
+// iniciar após clique (evita bloqueio do navegador)
+document.body.addEventListener("click", () => {
+  loopMorse();
+}, { once: true });
+
 function verificar() {
   let r = document.getElementById("resposta").value.toLowerCase().trim();
 
