@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eclipse - Fase 6</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+      text-align: center;
+    }
+
+    .center {
+      margin-top: 5%;
+    }
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 8px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      font-family: monospace;
+      text-align: center;
+      width: 300px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+
+    .bloco {
+      margin-top: 40px;
+      font-size: 18px;
+      letter-spacing: 3px;
+    }
+
+    .binario {
+      margin-top: 30px;
+      font-size: 16px;
+      color: #bbbbbb;
+      line-height: 25px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="center">
+
+  <h1>ECLIPSE</h1>
+
+  <input type="text" id="resposta" placeholder="Digite a resposta">
+  <br><br>
+  <button onclick="verificar()">ENVIAR</button>
+
+  <!-- TEXTO -->
+  <div class="bloco">
+    <p>PENTE</p>
+    <p>JUNTE</p>
+    <p>JUNTE</p>
+    <p>CHUTA</p>
+    <p>AINDAHÁTEMPOAINDAHÁTEMPO</p>
+  </div>
+
+  <!-- BINÁRIO -->
+  <div class="binario">
+    <p>0010</p>
+    <p>0100</p>
+    <p>0010</p>
+    <p>1000</p>
+    <p>1000000000000000000000000000</p>
+  </div>
+
+</div>
+
+<script>
+function verificar() {
+  let r = document.getElementById("resposta").value.trim();
+
+  if (r === "NUNCA") {
+    window.location.href = "fase7.html";
+  } else {
+    alert("Resposta incorreta.");
+  }
+}
+</script>
+
+</body>
+</html>
