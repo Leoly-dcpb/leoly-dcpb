@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eclipse - Fase 5</title>
+
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: monospace;
+      margin: 0;
+      text-align: center;
+    }
+
+    .center {
+      margin-top: 5%;
+    }
+
+    h1 {
+      font-size: 60px;
+      letter-spacing: 8px;
+      margin-bottom: 30px;
+    }
+
+    input {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      font-family: monospace;
+      text-align: center;
+      width: 300px;
+    }
+
+    button {
+      background: black;
+      color: white;
+      border: 1px solid white;
+      padding: 10px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    button:hover {
+      background-color: #222;
+    }
+
+    .code {
+      margin-top: 30px;
+      font-size: 20px;
+      letter-spacing: 5px;
+    }
+
+    .hint {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #bbbbbb;
+    }
+
+    .msg {
+      margin-top: 40px;
+      font-size: 16px;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="center">
+
+  <h1>ECLIPSE</h1>
+
+  <input type="text" id="resposta" placeholder="Digite a resposta">
+  <br><br>
+  <button onclick="verificar()">ENVIAR</button>
+
+  <!-- BOTÃO -->
+  <br>
+  <button onclick="window.location.href='lost.html'">
+    ciclo de desintegração
+  </button>
+
+
+
+  <!-- FRASE -->
+  <div class="msg">
+    Está acontecendo de novo
+  </div>
+
+</div>
+
+<script>
+function normalizar(texto) {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "") // remove acentos
+    .replace(/\s+/g, ""); // remove espaços
+}
+
+function verificar() {
+  let r = document.getElementById("resposta").value;
+  let resposta = normalizar(r);
+
+  if (resposta === "homemvitruviano") {
+    window.location.href = "fase6.html";
+  } else {
+    alert("Resposta incorreta.");
+  }
+}
+</script>
+
+</body>
+</html>
