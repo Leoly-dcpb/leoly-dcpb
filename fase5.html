@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Eclipse - Fase 5</title>
+  <title>Eclipse - Fase 2</title>
 
   <style>
     body {
@@ -45,10 +45,10 @@
       background-color: #222;
     }
 
-    .code {
-      margin-top: 30px;
-      font-size: 20px;
-      letter-spacing: 5px;
+    img {
+      width: 400px;
+      margin: 30px 0;
+      border: 1px solid white;
     }
 
     .hint {
@@ -81,9 +81,17 @@
     ciclo de desintegração
   </button>
 
+  <!-- IMAGEM -->
+  <br>
+  <img src="estreladedavi.png" alt="enigma">
 
+  <!-- DICAS -->
+  <div class="hint">
+    <p> Estrela de Davi</p>
+    <p>Sentido Horário</p>
+  </div>
 
-  <!-- FRASE -->
+  <!-- TEXTO -->
   <div class="msg">
     Está acontecendo de novo
   </div>
@@ -95,8 +103,8 @@ function normalizar(texto) {
   return texto
     .toLowerCase()
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "") // remove acentos
-    .replace(/\s+/g, ""); // remove espaços
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/\s+/g, "");
 }
 
 function verificar() {
